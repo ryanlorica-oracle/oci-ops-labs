@@ -8,8 +8,6 @@ terraform {
 
 provider "oci" {
   region              = var.region
-  auth                = "SecurityToken"
-  config_file_profile = "learn-terraform"
 }
 
 resource "oci_core_vcn" "example_vcn" {
