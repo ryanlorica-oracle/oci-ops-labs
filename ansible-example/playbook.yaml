@@ -1,0 +1,23 @@
+---
+- name: Install and Configure web servers
+  hosts: all
+  remote_user: opc
+  tasks:
+  - name: Ensure apache is at the latest version
+    ansible.builtin.yum:
+      name: httpd
+      state: latest # noqa package-latest
+    become: true
+  - name: Ensure apache is running
+    ansible.builtin.service:
+      name: httpd
+      state: started
+    become: true
+  - name: Permit traffic in default zone for http service
+    ansible.posix.firewalld:
+      service: http
+      permanent: true
+      state: enabled
+      immediate: true
+    become: true
+...
