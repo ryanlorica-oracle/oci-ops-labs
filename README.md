@@ -13,6 +13,10 @@ This repository contains the example code used in the OCI Operations Professiona
 * Fields that need to be commented out for configuration reuse have been commented out and labeled with "COMMENT"
 * For use with *Operations Lab 7-1* and *DevOps Lab 5-1*
 
+### sdk-example
+* Sample OCI Python SDK to provision a compute instance
+* For use with *Operations Lab 4-1*
+
 ### ansible-example
 * An example Ansible playbook to install and restart Apache, and open the firewall to HTTP
 * Ensure that the target machines have the public SSH key of your local machine (which should be the OCI Cloud Shell/Code Editor VM in this case)
